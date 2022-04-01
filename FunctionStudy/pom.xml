@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.puge</groupId>
+    <artifactId>FunctionStudy</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+
+    <modules>
+        <module>JavaToLinux</module>
+    </modules>
+
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.2.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <mysql-connector-java-version>8.0.25</mysql-connector-java-version>
+        <mybatis-plus.version>3.0.5</mybatis-plus.version>
+        <spring-boot-starter-test-version>2.2.1.RELEASE</spring-boot-starter-test-version>
+        <velocity.version>2.0</velocity.version>
+        <swagger.version>3.0.0</swagger.version>
+        <lombok-puge>1.18.8</lombok-puge>
+        <ali-json>1.2.47</ali-json>
+        <junit-version>4.12</junit-version>
+        <httpclient-version>4.5.3</httpclient-version>
+        <httpclientutil.version>1.0.4</httpclientutil.version>
+        <unirest-java-version>3.7.04</unirest-java-version>
+        <jackson-databind-version>2.11.0</jackson-databind-version>
+        <jsch-version>0.1.55</jsch-version>
+        <ganymed-ssh2-version>262</ganymed-ssh2-version>
+        <unirest-java-version>3.7.04</unirest-java-version>
+        <spring-boot-starter-web-version>2.3.2.RELEASE</spring-boot-starter-web-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-starter-web-version}</version>
+            </dependency>
+
+            <!--mybatis-plus 持久层-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!--mysql-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java-version}}</version>
+            </dependency>
+
+            <!-- velocity 模板引擎, Mybatis Plus 代码生成器需要 -->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot-starter-test-version}}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!--lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok-puge}</version>
+            </dependency>
+
+
+            <!--swagger-->
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-boot-starter</artifactId>
+                    <version>${swagger.version}</version>
+                </dependency>
+
+            <!--swagger ui-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <!--阿里 JSON-->
+            <!--        <dependency>-->
+            <!--            <groupId>com.alibaba</groupId>-->
+            <!--            <artifactId>fastjson</artifactId>-->
+            <!--            <version>${ali-json}</version>-->
+            <!--        </dependency>-->
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+            </dependency>
+
+
+            <!--http-->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient-version}}</version>
+            </dependency>
+
+            <!--http请求工具-->
+            <dependency>
+                <groupId>com.arronlong</groupId>
+                <artifactId>httpclientutil</artifactId>
+                <version>${httpclientutil.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.konghq</groupId>
+                <artifactId>unirest-java</artifactId>
+                <version>${unirest-java-version}}</version>
+            </dependency>
+            <!--json-->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-databind-version}</version>
+            </dependency>
+
+
+    <!--        <dependency>-->
+    <!--            <groupId>org.springframework</groupId>-->
+    <!--            <artifactId>spring-jcl</artifactId>-->
+    <!--            <version>5.2.1.RELEASE</version>-->
+    <!--            <scope>compile</scope>-->
+    <!--        </dependency>-->
+
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch</artifactId>
+                <version>${jsch-version}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.ethz.ganymed</groupId>
+                <artifactId>ganymed-ssh2</artifactId>
+                <version>${ganymed-ssh2-version}}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.konghq</groupId>
+                <artifactId>unirest-java</artifactId>
+                <version>${unirest-java-version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+            <!--        <dependency>-->
+            <!--            <groupId>org.slf4j</groupId>-->
+            <!--            <artifactId>slf4j-api</artifactId>-->
+            <!--            <version>2.0.0-alpha1</version>-->
+            <!--        </dependency>-->
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

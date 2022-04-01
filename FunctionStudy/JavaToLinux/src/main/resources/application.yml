@@ -1,0 +1,22 @@
+ftp:
+  linux:
+    ip: 123.56.191.123
+    port: 22
+    username: root
+    password: YSd99817749,.
+
+spring:
+  application:
+    name: ysd
+
+  # 数据库设置
+  datasource:
+    username: root
+    password: yinsd9981
+    url: jdbc:mysql://cdb-pxq6whaa.cd.tencentcdb.com:10143/puge_PersonInfo?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8001
+  servlet:
+    context-path: /linux

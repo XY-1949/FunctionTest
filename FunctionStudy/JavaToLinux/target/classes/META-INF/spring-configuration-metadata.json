@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "ftp.linux",
+      "type": "net.puge.inside.entity.vo.LinuxInfo",
+      "sourceType": "net.puge.inside.entity.vo.LinuxInfo"
+    }
+  ],
+  "properties": [
+    {
+      "name": "ftp.linux.ip",
+      "type": "java.lang.String",
+      "sourceType": "net.puge.inside.entity.vo.LinuxInfo"
+    },
+    {
+      "name": "ftp.linux.password",
+      "type": "java.lang.String",
+      "sourceType": "net.puge.inside.entity.vo.LinuxInfo"
+    },
+    {
+      "name": "ftp.linux.port",
+      "type": "java.lang.Integer",
+      "sourceType": "net.puge.inside.entity.vo.LinuxInfo"
+    },
+    {
+      "name": "ftp.linux.username",
+      "type": "java.lang.String",
+      "sourceType": "net.puge.inside.entity.vo.LinuxInfo"
+    }
+  ],
+  "hints": []
+}
